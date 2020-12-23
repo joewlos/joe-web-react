@@ -1,0 +1,20 @@
+.joe-footer-container {
+  width: 100%;
+  background-color: #13262E;
+}
+
+.joe-footer {
+  height: 8vh;
+  width: 100%;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.joe-footer p {
+  color: #EFF1F3 !important;
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding-left: 3rem;
+  margin: 0;
+}
