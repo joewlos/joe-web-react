@@ -1,6 +1,6 @@
 .joe-footer-container {
   width: 100%;
-  background-color: #13262E;
+  background-color: #555B6E;
 }
 
 .joe-footer {
@@ -12,7 +12,7 @@
 }
 
 .joe-footer p {
-  color: #EFF1F3 !important;
+  color: #FAF9F9 !important;
   font-weight: 500;
   font-size: 0.75rem;
   padding-left: 3rem;

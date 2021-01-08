@@ -18,7 +18,7 @@ function Footer() {
         <div className="joe-footer-container">
             <Row className="joe-footer">
                 <Col md={ 12 }>
-                    <p>© 2020 Joe Wlos</p>
+                    <p>© 2021 Joe Wlos</p>
                 </Col>
             </Row>
         </div>

@@ -9,6 +9,9 @@ import Nav from 'react-bootstrap/Nav';
 import NavBar from 'react-bootstrap/NavBar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+// Import PDFs
+import resumePDF from './pdfs/joe_wlos_resume.pdf';
+
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -84,10 +87,11 @@ function Navigation(props) {
                     {/* Dropdown Links */}
                     <NavDropdown title="Projects" id="basic-nav-dropdown" className="joe-menu-dropdown">
                         <NavDropdown.Item href="#action/3.1">Red Mirage</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">PredictIt</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Income Tax</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Cook County</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">This Site</NavDropdown.Item>
                     </NavDropdown>
 
                 {/* Close the internal links */}
@@ -103,10 +107,10 @@ function Navigation(props) {
 
                     {/* FontAwesome */}
                     <Nav.Item className="joe-icon-row">
-                        <a href="https://www.linkedin.com/in/joewlos/" className="joe-menu-icon"><FontAwesomeIcon icon={ faLinkedin } /></a>
-                        <a href="https://twitter.com/joewlos?lang=en" className="joe-menu-icon"><FontAwesomeIcon icon={ faTwitterSquare } /></a>
-                        <a href="https://github.com/joewlos" className="joe-menu-icon"><FontAwesomeIcon icon={ faGithubSquare } /></a>
-                        <a href="#action/2" className="joe-menu-icon"><FontAwesomeIcon icon={ faFile } /></a>
+                        <a href="https://www.linkedin.com/in/joewlos/" target="_blank" rel="noreferrer" className="joe-menu-icon"><FontAwesomeIcon icon={ faLinkedin } /></a>
+                        <a href="https://twitter.com/joewlos?lang=en" target="_blank" rel="noreferrer" className="joe-menu-icon"><FontAwesomeIcon icon={ faTwitterSquare } /></a>
+                        <a href="https://github.com/joewlos" target="_blank" rel="noreferrer" className="joe-menu-icon"><FontAwesomeIcon icon={ faGithubSquare } /></a>
+                        <a href={ resumePDF } target="_blank" rel="noreferrer" className="joe-menu-icon"><FontAwesomeIcon icon={ faFile } /></a>
                     </Nav.Item>
 
                 {/* Close the navigation */}

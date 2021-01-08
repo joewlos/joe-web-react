@@ -5,69 +5,70 @@
 }
 
 .joe-navbar-color {
-  background-color: #13262E;
-  transition: background-color 0.25s linear;
-  -moz-transition: background-color 0.25s linear;
-  -o-transition: background-color 0.25s linear;
-  -webkit-transition: background-color 0.25s linear;
+  background-color: #555B6E;
+  transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  -webkit-transition: background-color 0.25s ease;
 }
 
 .joe-navbar-solid {
-  background-color: #13262E;
+  background-color: #555B6E;
 }
 
 .joe-brand {
   font-family: 'Raleway', sans-serif;
-  color: #EFF1F3 !important;
+  color: #FAF9F9 !important;
   font-weight: 900;
   font-size: 5vh;
   padding-left: 3rem;
 }
 
 .joe-brand:hover {
+  color: #F2ED69 !important;
   transform: scale(1.05);
 }
 
 .joe-menu-dropdown a {
-  color: #EFF1F3 !important;
+  color: #FAF9F9 !important;
   font-size: 2.75vh;
   font-weight: 700;
 }
 
 .joe-menu-dropdown a:hover {
-  color: #F5E296 !important;
+  color: #F2ED69 !important;
   transform: scale(1.05);
 }
 
 .joe-menu-dropdown .dropdown-menu {
-  background-color: #EFF1F3;
+  background-color: #FAF9F9;
 }
 
 .joe-menu-dropdown .dropdown-menu a {
-  color: #13262E !important;
+  color: #555B6E !important;
 }
 
 .joe-menu-dropdown .dropdown-menu a:hover {
-  background-color: #dee2e5 !important;
+  background-color: #F2ED69 !important;
   transform: scale(1) !important;
 }
 
 .joe-menu-item {
-  color: #EFF1F3 !important;
+  color: #FAF9F9 !important;
   font-weight: 700;
   font-size: 2.75vh;
 }
 
 .joe-menu-item:hover {
-  color: #F5E296 !important;
+  color: #F2ED69 !important;
   transform: scale(1.05);
 }
 
 .navbar-toggler-icon {
   background-image: none !important;
-  color: #EFF1F3 !important;
+  color: #FAF9F9 !important;
   border-color: transparent !important;
-  padding: 0 1rem 0 0 !important;
+  padding: 0 2.5rem 0 0 !important;
 }
 
 .navbar-toggler-icon:focus {
@@ -88,13 +89,13 @@
 }
 
 .joe-menu-icon {
-  color: #EFF1F3 !important;
+  color: #FAF9F9 !important;
   font-size: 3vh;
   padding-right: 1rem;
 }
 
 .joe-menu-icon:hover {
-  color: #F5E296 !important;
+  color: #F2ED69 !important;
   transform: scale(1.05);
 }
 

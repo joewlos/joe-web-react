@@ -11,7 +11,7 @@
  </metadata>
  <g transform="translate(-7.3869,-14.939)" stroke-width=".26458">
   <g transform="matrix(-1,0,0,1,61.692,0)" aria-label="V">
-   <path d="m15.782 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#13262e" stroke-width=".26458">
+   <path d="m15.782 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#555B6E" stroke-width=".26458">
     <animateTransform
      attributeName="transform"
      type="scale"
@@ -22,7 +22,7 @@
    </path>
   </g>
   <g transform="matrix(-1,0,0,1,99.467,0)" aria-label="V">
-   <path d="m34.67 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#162d36" stroke-width=".26458">
+   <path d="m34.67 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#818696" stroke-width=".26458">
     <animateTransform
      attributeName="transform"
      type="scale"
@@ -36,7 +36,7 @@
  </g>
  <g transform="matrix(-1 0 0 1 73.243 35.155)" stroke-width=".26458">
   <g transform="matrix(-1,0,0,1,61.692,0)" aria-label="V">
-   <path d="m15.782 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#13262e" stroke-width=".26458">
+   <path d="m15.782 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#555B6E" stroke-width=".26458">
     <animateTransform
      attributeName="transform"
      type="scale"
@@ -47,7 +47,7 @@
    </path>
   </g>
   <g transform="matrix(-1,0,0,1,99.467,0)" aria-label="V">
-   <path d="m34.67 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#162d36" stroke-width=".26458">
+   <path d="m34.67 14.939 15.099 40.428 15.028-40.428h8.3961l-19.685 50.094h-7.4789l-19.756-50.094z" fill="#818696" stroke-width=".26458">
     <animateTransform
      attributeName="transform"
      type="scale"

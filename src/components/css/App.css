@@ -3,9 +3,9 @@ body {
   font-family: 'Open-Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #19323C;
+  background-color: #8F94A3;
   background-image: url('/src/components/images/w-background.svg');
   background-position: center;
-  background-size: 18vh;
+  background-size: 19vh;
   width: 100vw;
 }
