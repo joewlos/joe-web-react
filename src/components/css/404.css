@@ -1,0 +1,20 @@
+/* Container */
+.container-404 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  margin-top: 18vh;
+  height: 87vh;
+}
+
+.msg-404 {
+  color: #EFF1F3;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 16.75vh;
+}

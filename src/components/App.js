@@ -10,6 +10,7 @@ import './css/App.css';
 
 // Import components
 import Home from './Home.js';
+import NotFound from './404.js';
 
 // Route to the components
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <main>
       <Switch>
         <Route path='/' component={ Home } exact />
+        <Route component={ NotFound } exact />
       </Switch>
     </main>
   );
