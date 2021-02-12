@@ -1,0 +1,82 @@
+/* Container */
+.container-page {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-content {
+  background-color: #FAF9F9;
+  width: 100vw;
+  margin-top: 11vh;
+  min-height: 81vh;
+  text-align: center;
+  padding: 5vw;
+}
+@media all and (max-width: 767px) {
+  .container-content {
+    width: 100%;
+  }
+}
+
+/* Page */
+.page-title {
+    font-family: 'Raleway', sans-serif;
+    color: #555B6E !important;
+    font-weight: 700;
+    font-size: 2.5vw;
+}
+@media all and (max-width: 767px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  color: #555B6E !important;
+  font-weight: 500;
+  font-size: 1.5vw;
+}
+@media all and (max-width: 767px) {
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+.page-subtitle {
+  font-family: 'Raleway', sans-serif;
+  color: #555B6E !important;
+  font-weight: 300;
+  font-size: 2.5vw;
+}
+@media all and (max-width: 767px) {
+  .page-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Graph */
+.graph-subtitle {
+  font-weight: 300;
+  font-size: 1.25vw;
+  font-style: italic;
+  color: #555B6E !important;
+}
+@media all and (max-width: 767px) {
+  .graph-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.graph-title {
+  font-weight: 500;
+  font-size: 1.5vw;
+  font-style: italic;
+  color: #555B6E !important;
+}
+@media all and (max-width: 767px) {
+  .graph-title {
+    font-size: 1.25rem;
+  }
+}

@@ -157,10 +157,10 @@ function Home() {
           </Col>
           <Col md={ 8 } className='joe-link-column joe-project-linked'>
             
-            {/* Red mirage */}
+            {/* Red Mirage */}
             {
               project === 'red-mirage' ? (
-                <a href='#action/2' id='red-mirage' className='joe-project-a'>
+                <a href='/red-mirage' id='red-mirage' className='joe-project-a'>
                   <Row className='joe-projects-row'>
                       <Col md={ 12 } className='joe-projects-column'>
                         <div className='joe-projects-image-box'>
@@ -168,7 +168,7 @@ function Home() {
                         </div>
                         <h1 className='joe-projects-title'>Red Mirage</h1>
                         <h1 className='joe-projects-text joe-mobile-smaller'>
-                          A record number of voters mailed their ballots in 2020. <br class='joe-hide-mobile' />My team identified the "Red Mirage," assessed its impact, and developed a communications strategy to forewarn its effects.
+                          A record number of voters mailed their ballots in 2020. <br className='joe-hide-mobile' />My team identified the <i>Red Mirage</i>, assessed its impact, and developed a communications strategy to forewarn its effects.
                         </h1>
                       </Col>
                   </Row>
@@ -176,7 +176,7 @@ function Home() {
               
               // PredictIt
               ) : project === 'predictit' ? (
-                <a href='#action/2' id='predictit' className='joe-project-a'>
+                <a href='/predictit' id='predictit' className='joe-project-a'>
                   <Row className='joe-projects-row'>
                       <Col md={ 12 } className='joe-projects-column'>
                         <div className='joe-projects-image-box'>
@@ -200,7 +200,7 @@ function Home() {
                         </div>
                         <h1 className='joe-projects-title'>Income Tax</h1>
                         <h1 className='joe-projects-text joe-mobile-smaller'>
-                          In 2020, Illinois rejected a new progressive income tax. <br class='joe-hide-mobile' />Using public data, I examined how a progressive tax–similar to systems in other states–would affect IL's residents and budget.
+                          In 2020, Illinois rejected a new progressive income tax. <br className='joe-hide-mobile' />Using public data, I examined how a progressive tax–similar to systems in other states–would affect IL's residents and budget.
                         </h1>
                       </Col>
                   </Row>

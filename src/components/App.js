@@ -11,6 +11,8 @@ import './css/App.css';
 // Import components
 import Home from './Home.js';
 import NotFound from './404.js';
+import RedMirage from './RedMirage.js';
+import PredictIt from './PredictIt.js';
 
 // Route to the components
 function App() {
@@ -18,6 +20,8 @@ function App() {
     <main>
       <Switch>
         <Route path='/' component={ Home } exact />
+        <Route path='/red-mirage' component={ RedMirage } exact />
+        <Route path='/predictit' component={ PredictIt } exact />
         <Route component={ NotFound } exact />
       </Switch>
     </main>

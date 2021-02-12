@@ -86,8 +86,8 @@ function Navigation(props) {
 
                     {/* Dropdown Links */}
                     <NavDropdown title="Projects" id="basic-nav-dropdown" className="joe-menu-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Red Mirage</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">PredictIt</NavDropdown.Item>
+                        <NavDropdown.Item href="/red-mirage">Red Mirage</NavDropdown.Item>
+                        <NavDropdown.Item href="/predictit">PredictIt</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Income Tax</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Cook County</NavDropdown.Item>
                         <NavDropdown.Divider />
