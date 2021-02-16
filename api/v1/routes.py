@@ -5,8 +5,11 @@ API V1 ROUTES FOR FLASK APP
 from api.app import app
 
 # Import required packages
-from plotly import graph_objects as go
-from plotly import io
+import pandas as pd
+import os
+
+# Disable warnings
+pd.options.mode.chained_assignment = None 
 
 '''
 ROUTES
@@ -18,8 +21,8 @@ def home_message():
     return {'message': 'Welcome : )'}
 
 '''
-PLOTLY
-Return plotly data
+RED MIRAGE
+Static data for Plotly
 '''
 # Voting method sunburst and bar charts
 @app.route('/api/v1/red_mirage_data')
@@ -145,3 +148,127 @@ def red_mirage_data():
         ]
     }
     return data
+
+'''
+PREDICTIT
+Load history from CSV and parse
+'''
+# Function for cleaning the dataframe float values
+def clean_df(df, col_lst):
+    for col in col_lst:
+
+        # pylint: disable=fixme, anomalous-backslash-in-string
+        df[col] = df[col].replace('[\$,)]', '', regex=True)
+        df[col] = df[col].replace('[(]','-', regex=True)
+        df[col] = df[col].astype(float)
+    
+    # Return the dataframe
+    return df
+
+# Line chart and active markets
+@app.route('/api/v1/predictit_data')
+def predictit_data():
+
+    # Open the csv as a dataframe and clean the ($) and date format
+    path = os.path.join('v1', 'csv', 'TradeHistory.csv')
+    cols = ['Price', 'ProfitLoss', 'Fees', 'Risk', 'CreditDebit']
+    df = clean_df(
+        pd.read_csv(path, parse_dates=['DateExecuted']), 
+        cols
+    )
+
+    # Parse dates and encode market names
+    df['DateExecuted'] = df['DateExecuted'].dt.strftime('%Y-%m-%d %H:%M')
+
+    # Reverse by the date and add a portfolio value and volume column
+    df.sort_index(ascending=False, inplace=True)
+    df['Invested'] = df['Risk'].cumsum().abs().round(2)
+    df['Cash'] = df['CreditDebit'].cumsum().round(2) + 50.0
+    df['Total'] = df['Invested'] + df['Cash'] 
+    df['Volume'] = df['Shares'] * df['Price']
+
+    # Set the variables for total performance
+    invested = df['Invested'][0]
+    cash = df['Cash'][0]
+    total = df['Total'][0]
+    performance = df['Total'][0] - 50.0
+
+    # Put the line chart data and overall values into the output
+    output = {
+        'overall': {
+            'invested': invested,
+            'cash': cash,
+            'total': total,
+            'performance': performance
+        },
+        'performance_x': list(df['DateExecuted']),
+        'performance_y': [round(x, 2) for x in list(df['Total'])]
+    }
+
+    # Make a monthly df to get values for performance
+    df['Month'] = df['DateExecuted'].map(lambda x: x[:7])
+    month_df = df.groupby('Month').last().reset_index()[['Month', 'Total']]
+    month_df.loc[-1] = ['2019-01', 50.0]
+
+    # Reset the index and perform the calculations
+    month_df.sort_index(ascending=False, inplace=True)
+    month_df.reset_index(drop=True, inplace=True)
+    month_df['MonthDiff'] = month_df['Total'].diff(-1)
+    month_df['InceptDiff'] = month_df['Total'] - 50.0
+    month_df['MonthReturn'] = month_df['MonthDiff'] / month_df['Total'].shift(-1)
+    month_df['InceptReturn'] = month_df['InceptDiff'] / 50.0
+
+    # Round the columns
+    month_df['MonthReturn'] = month_df['MonthReturn'].round(3)
+    month_df['InceptReturn'] = month_df['InceptReturn'].round(3)
+
+    # Find monthly volume and join to the month df
+    volume_df = df.groupby('Month')['Volume'].sum().reset_index()
+    month_df = pd.merge(month_df, volume_df, on='Month', how='left')
+
+    # Send to records without the filler row and only take the last year
+    month_df.drop(max(month_df.index), inplace=True)
+    month_df = month_df.head(8)
+    month_df.sort_values(by='Month', ascending=True, inplace=True)
+    month_records = month_df.to_dict(orient='records')
+    
+    # Add the monthly data to the output
+    output['monthly'] = month_records
+
+    # Find out if a contract is binary
+    df['MarketID'] = df['URL'].str.split('/').str[-1]
+    binary_df = df.loc[df['ContractName'].isin(['Yes', 'No'])]
+    binary_df['Binary'] = True
+    binary_df = binary_df[['MarketID','Binary']]
+    binary_df.drop_duplicates(inplace=True)
+    df = df.merge(binary_df, on='MarketID', how='left')
+    df['Binary'].fillna(False, inplace=True)
+
+    # If the contract is binary, replace the contract name with the yes/no order
+    df.loc[~df['ContractName'].isin(['Yes', 'No']) & df['Binary'] == True, 
+        'ContractName'] = df['Type']
+    df.loc[df['ContractName'] == 'Sell Yes', 'ContractName'] = 'Yes'
+    df.loc[df['ContractName'] == 'Sell No', 'ContractName'] = 'No'
+
+    # Get the share activity for each contract type
+    df['ContractType'] = df.apply(lambda x:
+        'Yes' if x['Type'][-3:] == 'Yes' else 'No', axis=1)
+    df['ShareActivity'] = df.apply(lambda x:
+        x['Shares'] if x['Type'][:3] == 'Buy' else -x['Shares'], axis=1)
+
+    # Get the best and worst performing markets
+    value_df = df.groupby(['MarketID', 'MarketName']).agg({
+        'Shares': 'sum', 'CreditDebit': 'sum', 'DateExecuted': 'max',
+        'ShareActivity': 'sum'}).reset_index()
+    value_df = value_df.loc[value_df['ShareActivity'] == 0]
+    value_df.sort_values(by='CreditDebit', ascending=False, inplace=True)
+    best_df = value_df.head(5)
+    value_df.sort_values(by='CreditDebit', ascending=True, inplace=True)
+    worst_df = value_df.head(5)
+
+    # Add the best and worst to the output
+    output['best'] = best_df.to_dict(orient='records')
+    output['worst'] = worst_df.to_dict(orient='records')
+
+    # Return the data
+    return output

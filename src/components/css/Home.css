@@ -306,13 +306,13 @@
 .joe-angle {
   font-weight: 300;
   color: #FAF9F9;
-  font-size: 6vw;
+  font-size: 4vw;
 }
 
 .joe-angle-text {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: #FAF9F9;
 }
 
@@ -321,8 +321,8 @@
   user-select: none;
   background-color: #8F94A3;
   border-radius: 50%;
-  height: 11vw;
-  width: 11vw;
+  height: 8vw;
+  width: 8vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,8 +332,8 @@
 
 .joe-angle-hover:hover {
   background-color: #555B6E;
-  width: 11.5vw;
-  height: 11.5vw;
+  width: 8.5vw;
+  height: 8.5vw;
 }
 
 .joe-angle-col {
@@ -372,7 +372,8 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  height: 25vw;
 }
 
 .joe-projects-image {
@@ -383,6 +384,21 @@
 .joe-project-linked:hover .joe-projects-row .joe-link-column .joe-projects-image-box .joe-projects-image {
   width: 95%;
   height: auto;
+}
+
+.joe-projects-graph-box {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 25vw;
+  padding: 1.5vw;
+}
+
+.joe-projects-graph {
+  height: 17vw;
+  width: 100%;
 }
 
 .joe-project-a {
@@ -483,5 +499,16 @@
     background-color: transparent;
     width: auto;
     height: auto;
+  }
+  .joe-projects-graph {
+    height: 25vh;
+  }
+  .joe-projects-graph-box {
+    height: 35vh;
+    margin-bottom: 2vh;
+  }
+  .joe-projects-image-box {
+    height: 35vh;
+    margin-bottom: 2vh;
   }
 }

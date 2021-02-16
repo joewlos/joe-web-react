@@ -17,6 +17,9 @@ import Footer from './Footer.js';
 // Import CSS for the homepage
 import './css/Home.css';
 
+// Graphing
+import LineChart from './LineChart.js';
+
 // Import images
 import aquaHeadshot1 from './images/aqua_web_transparent_1.png';
 import aquaHeadshot2 from './images/aqua_web_transparent_2.png';
@@ -47,6 +50,10 @@ import {
 function Home() {
   const [homeMessage, setHomeMessage] = useState(false);
   const [project, setProject] = useState('red-mirage');  // Start with Red Mirage
+  const [predictItData, setPredictItData] = useState({
+    performance_x: false,
+    performance_y: false
+  });
   const projectList = {
     0: 'red-mirage',
     1: 'predictit',
@@ -78,6 +85,9 @@ function Home() {
     fetch('/api/v1/home_message').then(res => res.json()).then(data => {
       setHomeMessage(data.message);
     });
+    fetch('/api/v1/predictit_data').then(res => res.json()).then(data => {
+      setPredictItData(data);
+  });
   }, []);
 
   // Make the navigation transition its color
@@ -179,8 +189,12 @@ function Home() {
                 <a href='/predictit' id='predictit' className='joe-project-a'>
                   <Row className='joe-projects-row'>
                       <Col md={ 12 } className='joe-projects-column'>
-                        <div className='joe-projects-image-box'>
-                          <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
+                        <div className='joe-projects-graph-box'>
+                          <LineChart 
+                            className="joe-projects-graph" 
+                            x={ predictItData.performance_x }
+                            y={ predictItData.performance_y }
+                          />
                         </div>
                         <h1 className='joe-projects-title'>PredictIt</h1>
                         <h1 className='joe-projects-text joe-mobile-smaller'>

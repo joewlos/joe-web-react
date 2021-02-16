@@ -1,0 +1,151 @@
+/* Overall */
+.overall-title {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 1.5vw;
+    margin-bottom: 0vw;
+  }
+@media all and (max-width: 767px) {
+    .overall-title { 
+      font-size: 1.5rem;
+    }
+}
+
+.overall-symbol {
+    font-size: 2vw;
+    margin-bottom: 0vw;
+    color: #555B6E;
+}
+@media all and (max-width: 767px) {
+    .overall-symbol { 
+      font-size: 1.5rem;
+    }
+}
+
+
+.overall-number {
+    font-weight: 700;
+    font-size: 3vw;
+    margin-bottom: 0vw;
+}
+@media all and (max-width: 767px) {
+    .overall-number { 
+      font-size: 2.25rem;
+    }
+}
+
+.positive {
+    color: #70c86a !important;
+}
+
+/* Performance Line */
+.performance-line {
+    width: 100%;
+    height: 25vw;
+}
+@media all and (max-width: 767px) {
+    .performance-line { 
+      height: 60vh;
+    }
+}
+
+/* Table */
+.predictit-table tbody tr td {
+    vertical-align: middle;
+}
+
+.predictit-table thead tr th {
+    vertical-align: middle;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.predictit-table thead tr {
+    background-color: #555B6E;
+    color: #FAF9F9;
+    font-family: 'Raleway';
+}
+
+.predictit-column {
+    font-family: 'Raleway';
+    background-color: #555B6E;
+    color: #FAF9F9;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.value {
+    color: #555B6E;
+    font-weight: 700;
+}
+
+.loss {
+    color: rgba(228, 111, 98, 1);
+    font-weight: 700;
+}
+
+.profit {
+    color: #70c86a;
+    font-weight: 700;
+}
+
+/* Markets */
+.predictit-market {
+    height: 17.5vh;
+    background-color: #555B6E;
+}
+@media all and (max-width: 767px) {
+    .predictit-market { 
+      height: 25vh;
+    }
+}
+
+.best-amt {
+    font-weight: 700;
+    font-size: 2vw;
+    color: #70c86a !important;
+}
+@media all and (max-width: 767px) {
+    .best-amt { 
+      font-size: 1.75rem;
+    }
+}
+
+.worst-amt {
+    font-weight: 700;
+    font-size: 2vw;
+    color: rgba(228, 111, 98, 1) !important;
+}
+@media all and (max-width: 767px) {
+    .worst-amt { 
+      font-size: 1.75rem;
+    }
+}
+
+.market-link {
+    font-size: 1.5vw;
+    color: #add2ff !important;
+    font-weight: 900;
+    text-decoration: underline;
+}
+@media all and (max-width: 767px) {
+    .market-link { 
+      font-size: 1rem;
+    }
+}
+
+.extra-info p {
+    font-size: 1.25vw;
+    color: #FAF9F9 !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+@media all and (max-width: 767px) {
+    .extra-info p { 
+      font-size: 0.75rem;
+    }
+}
