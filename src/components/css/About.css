@@ -1,0 +1,33 @@
+/* Image */
+.joe-image {
+    width: 17vw;
+    height: auto;
+    margin: 1vw;
+    border-radius: 6px;
+}
+@media all and (max-width: 767px) {
+    .joe-image { 
+      width: 44vw;
+      margin: 0.5vw;
+      margin-top: 2vw;
+    }
+}
+.joe-w {
+    width: 28vw;
+    height: auto;
+    margin: 1vw;
+    margin-left: -0.5vw;
+}
+@media all and (max-width: 767px) {
+    .joe-w { 
+      width: 34vw;
+      margin: 0.5vw;
+      margin-top: 2vw;
+    }
+}
+
+
+/* Row Size */
+.about-row {
+    min-height: 75vh;
+}

@@ -57,8 +57,8 @@ function Home() {
   const projectList = {
     0: 'red-mirage',
     1: 'predictit',
-    2: 'income-tax',
-    3: 'cook-county'
+    // 2: 'income-tax',
+    // 3: 'cook-county'
   }
 
   // Select the correct project for display
@@ -143,7 +143,7 @@ function Home() {
                 </h1>
               </Col>
               <Col md={ 6 } className='joe-description-right'>
-                <a href='#action/2' className='joe-link-a'>
+                <a href='/about' className='joe-link-a'>
                   <img src={ wAbout } alt="W Logo" className="joe-w-about" />
                   <img src={ wAboutHighlight } alt="W Logo Highlighted" className="joe-w-about-highlight" />
                   <h1 className='joe-about-text'>
@@ -185,7 +185,7 @@ function Home() {
                 </a>
               
               // PredictIt
-              ) : project === 'predictit' ? (
+              ) : (
                 <a href='/predictit' id='predictit' className='joe-project-a'>
                   <Row className='joe-projects-row'>
                       <Col md={ 12 } className='joe-projects-column'>
@@ -204,37 +204,37 @@ function Home() {
                   </Row>
                 </a>
 
-              // Income Tax
-              ) : project === 'income-tax' ? (
-                <a href='#action/2' id='income-tax' className='joe-project-a'>
-                  <Row className='joe-projects-row'>
-                      <Col md={ 12 } className='joe-projects-column'>
-                        <div className='joe-projects-image-box'>
-                          <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
-                        </div>
-                        <h1 className='joe-projects-title'>Income Tax</h1>
-                        <h1 className='joe-projects-text joe-mobile-smaller'>
-                          In 2020, Illinois rejected a new progressive income tax. <br className='joe-hide-mobile' />Using public data, I examined how a progressive tax–similar to systems in other states–would affect IL's residents and budget.
-                        </h1>
-                      </Col>
-                  </Row>
-                </a>
+              // // Income Tax
+              // ) : project === 'income-tax' ? (
+              //   <a href='#action/2' id='income-tax' className='joe-project-a'>
+              //     <Row className='joe-projects-row'>
+              //         <Col md={ 12 } className='joe-projects-column'>
+              //           <div className='joe-projects-image-box'>
+              //             <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
+              //           </div>
+              //           <h1 className='joe-projects-title'>Income Tax</h1>
+              //           <h1 className='joe-projects-text joe-mobile-smaller'>
+              //             In 2020, Illinois rejected a new progressive income tax. <br className='joe-hide-mobile' />Using public data, I examined how a progressive tax–similar to systems in other states–would affect IL's residents and budget.
+              //           </h1>
+              //         </Col>
+              //     </Row>
+              //   </a>
 
-              // Cook County
-              ) : (
-                <a href='#action/2' id='cook-county' className='joe-project-a'>
-                  <Row className='joe-projects-row'>
-                      <Col md={ 12 } className='joe-projects-column'>
-                        <div className='joe-projects-image-box'>
-                          <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
-                        </div>
-                        <h1 className='joe-projects-title'>Cook County</h1>
-                        <h1 className='joe-projects-text joe-mobile-smaller'>
-                          In Cook County, the assessed values of single-family homes are often not uniform. I used property tax data to determine in which neighborhoods this problem is prevelant.
-                        </h1>
-                      </Col>
-                  </Row>
-                </a>
+              // // Cook County
+              // ) : (
+              //   <a href='#action/2' id='cook-county' className='joe-project-a'>
+              //     <Row className='joe-projects-row'>
+              //         <Col md={ 12 } className='joe-projects-column'>
+              //           <div className='joe-projects-image-box'>
+              //             <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
+              //           </div>
+              //           <h1 className='joe-projects-title'>Cook County</h1>
+              //           <h1 className='joe-projects-text joe-mobile-smaller'>
+              //             In Cook County, the assessed values of single-family homes are often not uniform. I used property tax data to determine in which neighborhoods this problem is prevelant.
+              //           </h1>
+              //         </Col>
+              //     </Row>
+              //   </a>
               )
 
             // Close projects

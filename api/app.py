@@ -4,6 +4,9 @@ FLASK APPLICATION FOR FRONTEND AND BACKEND
 # Import required packages
 from flask import Flask
 from flask_caching import Cache
+from flask_cors import (
+    CORS
+)
 
 # Initialize Flask pointed at the React build
 app = Flask(
@@ -15,6 +18,7 @@ app = Flask(
 # Add cache configuration
 app.config['CACHE_TYPE'] = 'simple'
 app.cache = Cache(app)
+CORS(app)
 
 
 '''

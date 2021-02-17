@@ -95,12 +95,12 @@
 
 /* Markets */
 .predictit-market {
-    height: 17.5vh;
+    height: 25vh;
     background-color: #555B6E;
 }
 @media all and (max-width: 767px) {
     .predictit-market { 
-      height: 25vh;
+      height: 30vh;
     }
 }
 
@@ -127,7 +127,7 @@
 }
 
 .market-link {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     color: #add2ff !important;
     font-weight: 900;
     text-decoration: underline;

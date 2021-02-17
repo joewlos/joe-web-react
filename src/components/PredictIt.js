@@ -29,7 +29,7 @@ import Footer from './Footer.js';
 import './css/Page.css';
 import './css/PredictIt.css';
 
-// Content for Red Mirage
+// Content for PredictIt
 function PredictIt() {
     const [predictItData, setPredictItData] = useState({
         overall: {

@@ -6,7 +6,7 @@ from api.app import app
 
 # Import required packages
 import pandas as pd
-import os
+from pathlib import Path
 
 # Disable warnings
 pd.options.mode.chained_assignment = None 
@@ -170,7 +170,7 @@ def clean_df(df, col_lst):
 def predictit_data():
 
     # Open the csv as a dataframe and clean the ($) and date format
-    path = os.path.join('v1', 'csv', 'TradeHistory.csv')
+    path = Path(__file__).parent / "../v1/csv/TradeHistory.csv"
     cols = ['Price', 'ProfitLoss', 'Fees', 'Risk', 'CreditDebit']
     df = clean_df(
         pd.read_csv(path, parse_dates=['DateExecuted']), 

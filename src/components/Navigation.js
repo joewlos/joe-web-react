@@ -82,16 +82,16 @@ function Navigation(props) {
                 className={ changeColor('') }
             >
                 <Nav>
-                    <Nav.Link href="#action/2" className="joe-menu-item">About</Nav.Link>
+                    <Nav.Link href="/about" className="joe-menu-item">About</Nav.Link>
 
                     {/* Dropdown Links */}
                     <NavDropdown title="Projects" id="basic-nav-dropdown" className="joe-menu-dropdown">
                         <NavDropdown.Item href="/red-mirage">Red Mirage</NavDropdown.Item>
                         <NavDropdown.Item href="/predictit">PredictIt</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Income Tax</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Cook County</NavDropdown.Item>
+                        {/* <NavDropdown.Item href="#action/3.3">Income Tax</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Cook County</NavDropdown.Item> */}
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">This Site</NavDropdown.Item>
+                        <NavDropdown.Item href="/about#this-website">This Site</NavDropdown.Item>
                     </NavDropdown>
 
                 {/* Close the internal links */}

@@ -106,8 +106,8 @@ function RedMirage() {
                                 </p>
                                 <p>
                                     Voters intended to act in accordance with their risk assessments.
-                                    Nationally, over half of Biden supporters planned to mail in or drop off their ballots,
-                                    and three quarters of Trump supporters planned to vote in person at their polling places.
+                                    Nationally, over half of Biden's supporters planned to mail in or drop off their ballots,
+                                    and three quarters of Trump's supporters planned to vote in person at their polling places.
                                 </p>
                             </Col>
                             <Col md={ 7 } className='text-center'>
@@ -147,7 +147,7 @@ function RedMirage() {
                                 </p>
                                 <p>
                                     Given onerous regulations for the verification and counting of mail-in ballots,
-                                    these swing states were not optimistic they would be able to quickly declare the winner of their contests.
+                                    these swing states were not optimistic they would be able to quickly declare the winner of their elections.
                                 </p>
                             </Col>
                         </Row>
@@ -424,12 +424,12 @@ function RedMirage() {
                                     following election day.
                                 </p>
                                 <p>
-                                    Biden eventually won Arizona, Georgia, Michigan, Nevada, Pennsylvania, and Wisconsin
-                                    after significant delays in the counting of their mail-in ballots.
-                                </p>
-                                <p>
                                     As we anticipated, Trump falsely declared victory on election night,
                                     but this initial attempt to subvert the will of the American people failed.
+                                </p>
+                                <p>
+                                    Biden eventually won Arizona, Georgia, Michigan, Nevada, Pennsylvania, and Wisconsin
+                                    after significant delays in the counting of their mail-in ballots.
                                 </p>
                                 <p>
                                     I remain proud our forewarning of and forearming for the <b><i>Red Mirage</i></b> played
