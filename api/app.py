@@ -18,7 +18,7 @@ app = Flask(
 # Add cache configuration
 app.config['CACHE_TYPE'] = 'simple'
 app.cache = Cache(app)
-# CORS(app)
+CORS(app)
 
 
 '''
