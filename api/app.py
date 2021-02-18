@@ -18,7 +18,7 @@ app = Flask(
 # Add cache configuration
 app.config['CACHE_TYPE'] = 'simple'
 app.cache = Cache(app)
-CORS(app)
+# CORS(app)
 
 
 '''
@@ -30,11 +30,6 @@ FRONTEND ROUTES
 @app.route('/<path:path>')  # Match all paths
 def index(path):
     return app.send_static_file('index.html')
-
-# Still send the static file in the event of a 404
-@app.errorhandler(404)   
-def not_found(e):   
-  return app.send_static_file('index.html')
 
 # Serve the manifest from the static folder
 @app.route('/manifest.json')

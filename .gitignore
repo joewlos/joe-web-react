@@ -53,6 +53,3 @@ venv.bak/
 
 # VSCode
 .vscode
-
-# Lint
-.eslintcache
