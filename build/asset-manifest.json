@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0871768e.chunk.css",
+    "main.js": "/static/js/main.cf4f659b.chunk.js",
+    "main.js.map": "/static/js/main.cf4f659b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.72a4bdc2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.72a4bdc2.js.map",
+    "static/js/2.f356eba5.chunk.js": "/static/js/2.f356eba5.chunk.js",
+    "static/js/2.f356eba5.chunk.js.map": "/static/js/2.f356eba5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0871768e.chunk.css.map": "/static/css/main.0871768e.chunk.css.map",
+    "static/js/2.f356eba5.chunk.js.LICENSE.txt": "/static/js/2.f356eba5.chunk.js.LICENSE.txt",
+    "static/media/aqua_web_transparent.020f380a.png": "/static/media/aqua_web_transparent.020f380a.png",
+    "static/media/aqua_web_transparent_1.c119f260.png": "/static/media/aqua_web_transparent_1.c119f260.png",
+    "static/media/aqua_web_transparent_2.9a29e6f0.png": "/static/media/aqua_web_transparent_2.9a29e6f0.png",
+    "static/media/aqua_web_transparent_3.262694f0.png": "/static/media/aqua_web_transparent_3.262694f0.png",
+    "static/media/aqua_web_transparent_4.49628eae.png": "/static/media/aqua_web_transparent_4.49628eae.png",
+    "static/media/bike.b49acd3f.jpg": "/static/media/bike.b49acd3f.jpg",
+    "static/media/cnn.03a33266.png": "/static/media/cnn.03a33266.png",
+    "static/media/crown_heights.b7972cbd.jpg": "/static/media/crown_heights.b7972cbd.jpg",
+    "static/media/joe_wlos_resume.cb6501c2.pdf": "/static/media/joe_wlos_resume.cb6501c2.pdf",
+    "static/media/newyork.c7ca5868.png": "/static/media/newyork.c7ca5868.png",
+    "static/media/nyt.465f3a07.png": "/static/media/nyt.465f3a07.png",
+    "static/media/politico.9f901250.png": "/static/media/politico.9f901250.png",
+    "static/media/red_mirage_map.804515db.svg": "/static/media/red_mirage_map.804515db.svg",
+    "static/media/reuters.122ccada.png": "/static/media/reuters.122ccada.png",
+    "static/media/usatoday.d2a5e8f9.png": "/static/media/usatoday.d2a5e8f9.png",
+    "static/media/App.css": "/static/media/w-background.6d77046b.svg",
+    "static/media/w-dynamic.e9f56ce0.svg": "/static/media/w-dynamic.e9f56ce0.svg",
+    "static/media/w_about.32cfdc4d.svg": "/static/media/w_about.32cfdc4d.svg",
+    "static/media/w_about_highlight.fb281de0.svg": "/static/media/w_about_highlight.fb281de0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72a4bdc2.js",
+    "static/js/2.f356eba5.chunk.js",
+    "static/css/main.0871768e.chunk.css",
+    "static/js/main.cf4f659b.chunk.js"
+  ]
+}
