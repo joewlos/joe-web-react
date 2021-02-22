@@ -49,6 +49,7 @@ function PredictIt() {
         fetch('/api/v1/predictit_data').then(res => res.json()).then(data => {
             setPredictItData(data);
         });
+        document.title = "Joe Wlos - PredictIt";
     }, []);
 
     // No transition for the navigation on pages

@@ -1,5 +1,5 @@
 // React
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Bootstrap
 import { 
@@ -22,6 +22,11 @@ import './css/About.css';
 
 // Content for About
 function About() {
+
+    // Change the title
+    useEffect(() => {
+        document.title = "Joe Wlos - About";
+    }, []);
 
     // No transition for the navigation on pages
     return (
@@ -57,8 +62,8 @@ function About() {
                                 </p>
                             </Col>
                             <Col md={ 7 } className='text-center flex-row'>
-                                <img src={ crownHeights } alt="Joe in Winter" className="joe-image" />
-                                <img src={ bike } alt="Joe on a Bike" className="joe-image" />
+                                <img src={ crownHeights } alt="Joe Wlos in Winter" className="joe-image" />
+                                <img src={ bike } alt="Joe Wlos on a Bike" className="joe-image" />
                             </Col>
                         </Row>
 
@@ -92,7 +97,7 @@ function About() {
                                 </p>
                             </Col>
                             <Col md={ 7 } className='text-center flex-row'>
-                                <img src={ wDynamic } alt="W Moving" className="joe-w" />
+                                <img src={ wDynamic } alt="Dynamic 'W' in Joe Wlos" className="joe-w" />
                             </Col>
                         </Row>
                     </div>

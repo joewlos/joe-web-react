@@ -2,7 +2,7 @@
 FLASK APPLICATION FOR FRONTEND AND BACKEND
 '''
 # Import required packages
-from flask import Flask
+from flask import Flask, make_response
 from flask_caching import Cache
 from flask_cors import (
     CORS
@@ -31,20 +31,30 @@ FRONTEND ROUTES
 def index(path):
     return app.send_static_file('index.html')
 
-# Still send the static file in the event of a 404
-@app.errorhandler(404)   
-def not_found(e):
-    return app.send_static_file('index.html')
-
 # Serve the manifest from the static folder
 @app.route('/manifest.json')
 def manifest():
     return app.send_static_file('manifest.json')
 
-# Server the asset manifest from the static folder
-@app.route('/asset_manifest.json')
-def asset_manifest():
-    return app.send_static_file('asset_manifest.json')
+# Serve the favicon from the static folder
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('favicon.ico')
+
+# Serve a string for robots.txt
+@app.route('/robots.txt')
+def robots():
+    source = '# https://www.robotstxt.org/robotstxt.html \n'
+    allow = 'User-agent: * \n'
+    disallow = 'Disallow: '
+    response = make_response(source + allow + disallow, 200)
+    response.mimetype = "text/plain"
+    return response
+
+# Still send the static file in the event of a 404
+@app.errorhandler(404)   
+def not_found(e):
+    return app.send_static_file('index.html')
 
 
 '''

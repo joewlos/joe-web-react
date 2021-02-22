@@ -44,6 +44,7 @@ function RedMirage() {
         fetch('/api/v1/red_mirage_data').then(res => res.json()).then(data => {
             setMirageData(data);
         });
+        document.title = "Joe Wlos - Red Mirage";
     }, []);
 
     // No transition for the navigation on pages
@@ -78,7 +79,7 @@ function RedMirage() {
                                 </p>
                             </Col>
                             <Col md={ 7 } className='text-center'>
-                                <img src={ redMirageMap } alt="Red Mirage" className='red-mirage-map' />
+                                <img src={ redMirageMap } alt="Red Mirage on the Electoral Map" className='red-mirage-map' />
                                 <p className='graph-subtitle mt-3'>
                                     On election night, Trump led in swing states where in-person ballots were counted and reported first.
                                     Four days later, after states had tallied mail-in ballots, Biden's victory was apparent.
@@ -89,9 +90,9 @@ function RedMirage() {
                         {/* Analyzing our data */}
                         <Row className='align-items-center mb-3'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     Partisanship in Voting Method Selection
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center'>
@@ -128,9 +129,9 @@ function RedMirage() {
                         {/* Recognizing the pattern */}
                         <Row className='align-items-center mt-5 mb-4'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     Ballot Counting Delays
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center mb-4'>
@@ -237,9 +238,9 @@ function RedMirage() {
                         </Row>
                         <Row className='align-items-center mt-5 d-block d-md-none'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     The Red Mirage
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center mt-4 mb-2'>
@@ -260,9 +261,9 @@ function RedMirage() {
                         {/* Trump's threat */}
                         <Row className='align-items-center mt-5 mb-4'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     Defusing Trump's Threat
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center'>
@@ -281,9 +282,9 @@ function RedMirage() {
                                 </p>
                             </Col>
                             <Col md={ 7 } className='text-center'>
-                                <h1 className='graph-title mb-5 mt-2'>
+                                <h2 className='graph-title mb-5 mt-2'>
                                     What is the likelihood of substantial mail-in ballot fraud?
-                                </h1>
+                                </h2>
                                 <div className='stack-fill'>
                                     <StackedBar
                                         data={ mirageData.fraud_stacked }
@@ -299,9 +300,9 @@ function RedMirage() {
                         {/* Press campaign */}
                         <Row className='align-items-center mt-5 mb-4'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     Alerting the Press
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center'>
@@ -330,32 +331,32 @@ function RedMirage() {
                                 </div>
                                 <div className='press-clip'>
                                     <a target="_blank" rel="noreferrer" href="https://www.cnn.com/2020/09/01/politics/2020-election-count-red-mirage-blue-shift/index.html">
-                                        <img src={ cnn } alt="CNN" className='press-logo-h' />
+                                        <img src={ cnn } alt="Link to Red Mirage on CNN" className='press-logo-h' />
                                     </a>
                                 </div>
                                 <div className='press-clip'>
                                     <a target="_blank" rel="noreferrer" href="https://www.nytimes.com/2020/09/02/us/politics/voting-election-day.html">
-                                        <img src={ nyt } alt="NYT" className='press-logo-v' />
+                                        <img src={ nyt } alt="Link to Red Mirage on NYT" className='press-logo-v' />
                                     </a>
                                 </div>
                                 <div className='press-clip'>
                                     <a target="_blank" rel="noreferrer" href="https://www.politico.com/news/2020/09/03/pennsylvania-democrats-election-day-408147">
-                                        <img src={ politico } alt="Politico" className='press-logo-v' />
+                                        <img src={ politico } alt="Link to Red Mirage on Politico" className='press-logo-v' />
                                     </a>
                                 </div>                                
                                 <div className='press-clip'>
                                     <a target="_blank" rel="noreferrer" href="https://www.reuters.com/article/us-usa-election-mirage-explainer/explainer-red-mirage-blue-mirage-beware-of-early-u-s-election-wins-idUSKBN2771CL">
-                                        <img src={ reuters } alt="Reuters" className='press-logo-v' />
+                                        <img src={ reuters } alt="Link to Red Mirage on Reuters" className='press-logo-v' />
                                     </a>
                                 </div>
                                 <div className='press-clip'>
                                     <a target="_blank" rel="noreferrer" href="https://nymag.com/intelligencer/2020/09/trump-could-have-election-night-lead-due-to-mail-in-voting.html">
-                                        <img src={ nymag } alt="New York" className='press-logo-v' />
+                                        <img src={ nymag } alt="Link to Red Mirage on New York Magazine" className='press-logo-v' />
                                     </a>
                                 </div>
                                 <div className='press-clip'>
                                     <a target="_blank" rel="noreferrer" href="https://www.usatoday.com/story/news/politics/elections/2020/09/03/vote-mail-absentee-strategy-could-hurt-democrats-election-day/5633132002/">
-                                        <img src={ usatoday } alt="USA Today" className='press-logo-h' />
+                                        <img src={ usatoday } alt="Link to Red Mirage on USA Today" className='press-logo-h' />
                                     </a>
                                 </div>
                             </Col>
@@ -364,9 +365,9 @@ function RedMirage() {
                         {/* Engaging the public */}
                         <Row className='align-items-center mt-5 mb-4'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     Engaging the Public
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center'>
@@ -411,9 +412,9 @@ function RedMirage() {
                         {/* Our Impact */}
                         <Row className='align-items-center mt-5 mb-4'>
                             <Col md={ 12 } className='text-left'>
-                                <h1 className='page-subtitle'>
+                                <h2 className='page-subtitle'>
                                     Our Impact
-                                </h1>
+                                </h2>
                             </Col>
                         </Row>
                         <Row className='align-items-center'>
@@ -437,9 +438,9 @@ function RedMirage() {
                                 </p>
                             </Col>
                             <Col md={ 7 } className='text-center'>
-                            <h1 className='graph-title mb-5 mt-2'>
+                                <h2 className='graph-title mb-5 mt-2'>
                                     When do you expect to know the results of the presidential election?
-                                </h1>
+                                </h2>
                                 <div className='stack-fill'>
                                     <StackedBar
                                         data={ mirageData.expect_stacked }

@@ -1,15 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Joe Wlos",
+  "name": "Joe Wlos - Personal Website",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64",
       "type": "image/x-icon"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#B7D5D4",
-  "background_color": "#19323C"
+  "theme_color": "#555b6e",
+  "background_color": "#EFF1F3"
 }

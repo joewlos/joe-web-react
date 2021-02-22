@@ -97,7 +97,7 @@ function Home() {
 
       {/* Welcome message */}
       <div className='joe-welcome'>
-        <h1 className='joe-welcome-msg'>{ homeMessage }</h1>
+        <p className='joe-welcome-msg'>{ homeMessage }</p>
       </div>
 
       {/* Introductory information */}
@@ -108,23 +108,23 @@ function Home() {
           <Col md={ 6 } className='joe-headshot-column'>
             <Row className='joe-headshot-row'>
               <Col md={ 6 } className='joe-headshot-column joe-headshot-box-2 order-2'>
-                <img src={ aquaHeadshot2 } alt="Headshot of Joe" className="joe-headshot" />
+                <img src={ aquaHeadshot2 } alt="Joe Wlos Partial Headshot Square 1" className="joe-headshot" />
               </Col>
               <Col md={ 6 } className='joe-headshot-column joe-headshot-box-1 order-1'>
-                <img src={ aquaHeadshot1 } alt="Headshot of Joe" className="joe-headshot" />
+                <img src={ aquaHeadshot1 } alt="Joe Wlos Partial Headshot Square 2" className="joe-headshot" />
               </Col>
               <Col md={ 6 } className='joe-headshot-column joe-headshot-box-3 order-3'>
-                <img src={ aquaHeadshot3 } alt="Headshot of Joe" className="joe-headshot" />
+                <img src={ aquaHeadshot3 } alt="Joe Wlos Partial Headshot Square 3" className="joe-headshot" />
               </Col>
               <Col md={ 6 } className='joe-headshot-column joe-headshot-box-4 order-4'>
-                <img src={ aquaHeadshot4 } alt="Headshot of Joe" className="joe-headshot" />
+                <img src={ aquaHeadshot4 } alt="Joe Wlos Partial Headshot Square 4" className="joe-headshot" />
               </Col>
             </Row>
           </Col>
           
           {/* Mobile headshot */}
           <Col md={ 12 } className='joe-mobile-headshot'>
-                <img src={ aquaHeadshotMobile } alt="Headshot of Joe" className="joe-headshot" />
+                <img src={ aquaHeadshotMobile } alt="Joe Wlos Headshot 2020" className="joe-headshot" />
           </Col>
           
           {/* Description text */}
@@ -138,17 +138,17 @@ function Home() {
             </Row>
             <Row className='joe-description-content'>
               <Col md={ 6 } className='joe-description-left'>
-                <h1 className='joe-projects-text'>
+                <p className='joe-description-text mb-0'>
                   I strive to investigate problems, discover their causes, and (when possible) communicate and implement their solutions.
-                </h1>
+                </p>
               </Col>
               <Col md={ 6 } className='joe-description-right'>
                 <a href='/about' className='joe-link-a'>
-                  <img src={ wAbout } alt="W Logo" className="joe-w-about" />
-                  <img src={ wAboutHighlight } alt="W Logo Highlighted" className="joe-w-about-highlight" />
-                  <h1 className='joe-about-text'>
+                  <img src={ wAbout } alt="Joe Wlos 'W' Logo" className="joe-w-about" />
+                  <img src={ wAboutHighlight } alt="Joe Wlos 'W' Logo Highlighted" className="joe-w-about-highlight" />
+                  <h2 className='joe-about-text'>
                     About Me
-                  </h1>
+                  </h2>
                 </a>
               </Col>
             </Row>
@@ -174,12 +174,12 @@ function Home() {
                   <Row className='joe-projects-row'>
                       <Col md={ 12 } className='joe-projects-column'>
                         <div className='joe-projects-image-box'>
-                          <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image red-mirage" />
+                          <img src={ redMirageMap } alt="Red Mirage on Electoral Map" className="joe-projects-image red-mirage" />
                         </div>
-                        <h1 className='joe-projects-title'>Red Mirage</h1>
-                        <h1 className='joe-projects-text joe-mobile-smaller'>
+                        <h2 className='joe-projects-title'>Red Mirage</h2>
+                        <h3 className='joe-projects-text joe-mobile-smaller'>
                           A record number of voters mailed their ballots in 2020. <br className='joe-hide-mobile' />My team identified the <i>Red Mirage</i>, assessed its impact, and developed a communications strategy to forewarn its effects.
-                        </h1>
+                        </h3>
                       </Col>
                   </Row>
                 </a>
@@ -196,10 +196,10 @@ function Home() {
                             y={ predictItData.performance_y }
                           />
                         </div>
-                        <h1 className='joe-projects-title'>PredictIt</h1>
-                        <h1 className='joe-projects-text joe-mobile-smaller'>
+                        <h2 className='joe-projects-title'>PredictIt</h2>
+                        <h3 className='joe-projects-text joe-mobile-smaller'>
                           PredictIt is an online prediction market, which allows users to buy "yes" or "no" contracts on the outcome of political events. <br className='joe-hide-mobile' />In 2019 and 2020, I tracked my performance on the site.
-                        </h1>
+                        </h3>
                       </Col>
                   </Row>
                 </a>
@@ -212,10 +212,10 @@ function Home() {
               //           <div className='joe-projects-image-box'>
               //             <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
               //           </div>
-              //           <h1 className='joe-projects-title'>Income Tax</h1>
-              //           <h1 className='joe-projects-text joe-mobile-smaller'>
+              //           <h2 className='joe-projects-title'>Income Tax</h2>
+              //           <h3 className='joe-projects-text joe-mobile-smaller'>
               //             In 2020, Illinois rejected a new progressive income tax. <br className='joe-hide-mobile' />Using public data, I examined how a progressive tax–similar to systems in other states–would affect IL's residents and budget.
-              //           </h1>
+              //           </h3>
               //         </Col>
               //     </Row>
               //   </a>
@@ -228,10 +228,10 @@ function Home() {
               //           <div className='joe-projects-image-box'>
               //             <img src={ redMirageMap } alt="Red Mirage" className="joe-projects-image" />
               //           </div>
-              //           <h1 className='joe-projects-title'>Cook County</h1>
-              //           <h1 className='joe-projects-text joe-mobile-smaller'>
+              //           <h2 className='joe-projects-title'>Cook County</h2>
+              //           <h3 className='joe-projects-text joe-mobile-smaller'>
               //             In Cook County, the assessed values of single-family homes are often not uniform. I used property tax data to determine in which neighborhoods this problem is prevelant.
-              //           </h1>
+              //           </h3>
               //         </Col>
               //     </Row>
               //   </a>
@@ -255,33 +255,33 @@ function Home() {
           <Col md={ 3 } className='joe-link-column'>
             <a href="https://www.linkedin.com/in/joewlos/" target="_blank" rel="noreferrer" className="joe-link-box-purple joe-link-a">
               <FontAwesomeIcon className='joe-home-icon' icon={ faLinkedin } />
-              <h1 className='joe-link-text'>
+              <p className='joe-link-text'>
                 LinkedIn
-              </h1>
+              </p>
             </a>
           </Col>
           <Col md={ 3 } className='joe-link-column'>
             <a href="https://twitter.com/joewlos?lang=en" target="_blank" rel="noreferrer" className="joe-link-box-purple joe-link-a">
               <FontAwesomeIcon className='joe-home-icon' icon={ faTwitterSquare } />
-              <h1 className='joe-link-text'>
+              <p className='joe-link-text'>
                 Twitter
-              </h1>
+              </p>
             </a>
           </Col>
           <Col md={ 3 } className='joe-link-column'>
             <a href="https://github.com/joewlos" target="_blank" rel="noreferrer" className="joe-link-box-purple joe-link-a">
               <FontAwesomeIcon className='joe-home-icon' icon={ faGithubSquare } />
-              <h1 className='joe-link-text'>
+              <p className='joe-link-text'>
                 GitHub
-              </h1>
+              </p>
             </a>
           </Col>
           <Col md={ 3 } className='joe-link-column'>
             <a href={ resumePDF } target="_blank" rel="noreferrer" className="joe-link-box-purple joe-link-a">
               <FontAwesomeIcon className='joe-home-icon' icon={ faFile } />
-              <h1 className='joe-link-text'>
+              <p className='joe-link-text'>
                 Resume
-              </h1>
+              </p>
             </a>
           </Col>
         </Row>

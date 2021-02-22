@@ -11,7 +11,7 @@
 }
 
 .joe-welcome-msg {
-  color: #EFF1F3;
+  color: #EFF1F3 !important;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 6rem;
@@ -178,15 +178,16 @@
 }
 
 .joe-link-text {
-  color: #FAF9F9;
+  color: #FAF9F9 !important;
   font-size: 2vw;
+  line-height: 2.5vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 
 .joe-link-text:hover {
   text-decoration: none;
-  color: #FAF9F9;
+  color: #FAF9F9 !important;
 }
 
 .joe-home-icon {
@@ -210,7 +211,7 @@
 }
 
 .joe-link-a:hover .joe-home-icon {
-  color: #555B6E;
+  color: #FAF9F9;
   font-size: 9vw;
 }
 
@@ -358,6 +359,12 @@
   font-size: 2vw;
 }
 
+.joe-description-text {
+  font-size: 2vw;
+  line-height: 2.5vw;
+  color: #FAF9F9 !important;
+}
+
 .joe-projects-column {
   padding: 0 !important;
   display: flex;
@@ -452,6 +459,11 @@
   .joe-projects-text {
     font-size: 4vh;
     text-align: center;
+  }
+  .joe-description-text {
+    font-size: 4vh;
+    text-align: center;
+    line-height: 4.5vh;
   }
   .joe-projects-row {
     height: auto;
