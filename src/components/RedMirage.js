@@ -309,7 +309,7 @@ function RedMirage() {
                             <Col md={ 12 } className='text-left'>
                                 <p>
                                     After building a custom web application to calculate election night scenarios,
-                                    Dr. Konar and I began selectively briefing Democratic Party decision makers, state leaders, the press, and election night analysts
+                                    Dr. Konar and I began <a rel="noreferrer" target="_blank" href="https://www.scribd.com/document/474743229/Red-Mirage-memo">selectively briefing</a> Democratic Party decision makers, state leaders, the press, and election night analysts
                                     about the likelihood of the <b><i>Red Mirage</i></b>.
                                 </p>
                                 <p>
@@ -374,7 +374,7 @@ function RedMirage() {
                             <Col md={ 12 } className='text-left'>
                                 <p>
                                     On social media, public figures, celebrities, and influencers amplified the <b><i>Red Mirage</i></b> narrative,
-                                    informing Americans about mail-in ballot counting timelines. After the polls closed, they encouraged their followers
+                                    informing Americans about mail-in ballot counting timelines. After the polls closed on election night, they encouraged their followers
                                     to disregard false victory claims and patiently wait for states to count every vote.
                                 </p>
                                 <p className='text-center mt-4'>
