@@ -36,13 +36,12 @@ def home_message():
         'message': 'Welcome : )'
     }
 
-# Return the id from our database connection as an example
+# Return the first id from our database connection as an example
 @app.route('/api/v1/database_example')
 def database_example():
-    first_pin = CookCounty.query.first().id
-    return {
-        'example_pin': first_pin
-    }
+    first_pin = CookCounty.query.first().__dict__
+    first_pin.pop('_sa_instance_state', None)
+    return first_pin
 
 
 '''
