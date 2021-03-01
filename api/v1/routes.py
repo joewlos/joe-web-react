@@ -32,7 +32,9 @@ All routes must be prefaced with '/api/v1'
 # Return the message to display on the homepage
 @app.route('/api/v1/home_message')
 def home_message():
-    return {'message': 'Welcome : )'}
+    return {
+        'message': 'Welcome : )'
+    }
 
 # Return the id from our database connection as an example
 @app.route('/api/v1/database_example')
