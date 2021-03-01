@@ -11,6 +11,20 @@ from pathlib import Path
 # Disable warnings
 pd.options.mode.chained_assignment = None 
 
+
+'''
+DATABASE CONNECTION & MODELS
+'''
+# Import database 
+from api.v1.models.shared import db
+
+# Initialize on the application
+db.init_app(app)
+
+# Import the model for properties in Cook County
+from api.v1.models.cook_county import CookCounty
+
+
 '''
 ROUTES
 All routes must be prefaced with '/api/v1'
@@ -19,6 +33,15 @@ All routes must be prefaced with '/api/v1'
 @app.route('/api/v1/home_message')
 def home_message():
     return {'message': 'Welcome : )'}
+
+# Return the id from our database connection as an example
+@app.route('/api/v1/database_example')
+def database_example():
+    first_pin = CookCounty.query.first().id
+    return {
+        'example_pin': first_pin
+    }
+
 
 '''
 RED MIRAGE

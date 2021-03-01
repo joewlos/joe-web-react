@@ -7,6 +7,7 @@ from flask_caching import Cache
 from flask_cors import (
     CORS
 )
+import os
 
 # Initialize Flask pointed at the React build
 app = Flask(
@@ -20,6 +21,15 @@ app.config['CACHE_TYPE'] = 'simple'
 app.cache = Cache(app)
 CORS(app)
 
+# Configuration for database on local or Heroku
+if 'ON_HEROKU' not in os.environ:
+	from api.config import Configuration
+	app.config['SQLALCHEMY_DATABASE_URI'] = Configuration.URI
+else:
+	app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+
+# Don't track database modifications
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 '''
 FRONTEND ROUTES
